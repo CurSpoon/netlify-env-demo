@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Netlify 环境变量测试</title>
+</head>
+<body>
+    <h1>Netlify 环境变量测试</h1>
+    <div id="apiKey"></div>
+    <div id="baseUrl"></div>
+
+    <!-- 引入环境变量脚本 -->
+    <script src="/env.js"></script>
+    <script>
+        window.onload = function() {
+            document.getElementById('apiKey').innerHTML = 
+                'API Key: ' + window.ENV.API_KEY;
+            document.getElementById('baseUrl').innerHTML = 
+                'Base URL: ' + window.ENV.BASE_URL;
+        }
+    </script>
+</body>
+</html>
