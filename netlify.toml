@@ -1,6 +1,12 @@
+# 构建设置部分
 [build]
+  # 指定要发布的目录，"/" 表示项目根目录
   publish = "/"
+  # 指定构建命令，这里执行 build.js 脚本来生成环境变量文件
   command = "node build.js"
 
+# 生产环境特定的配置
 [context.production]
+  # 设置生产环境的环境变量
+  # 指定 Node.js 的版本为 14
   environment = { NODE_VERSION = "14" }
