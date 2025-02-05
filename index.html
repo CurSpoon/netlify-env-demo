@@ -1,21 +1,27 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html>  <!-- 声明文档类型为 HTML5 -->
+<html>  <!-- HTML 文档的根元素 -->
 <head>
-    <title>Netlify 环境变量测试</title>
+    <title>Netlify 环境变量测试</title>  <!-- 设置网页标题 -->
 </head>
 <body>
-    <h1>Netlify 环境变量测试</h1>
-    <div id="apiKey"></div>
-    <div id="baseUrl"></div>
+    <h1>Netlify 环境变量测试</h1>  <!-- 主标题 -->
+    <div id="apiKey"></div>  <!-- 用于显示 API Key 的容器 -->
+    <div id="baseUrl"></div>  <!-- 用于显示 Base URL 的容器 -->
 
     <!-- 引入环境变量脚本 -->
-    <script src="/env.js"></script>
+    <script src="/env.js"></script>  <!-- 引入包含环境变量的脚本文件 -->
     <script>
+        // 当页面加载完成后执行以下代码
         window.onload = function() {
+            // 将 API Key 显示在 id 为 'apiKey' 的 div 中
             document.getElementById('apiKey').innerHTML = 
                 'API Key: ' + window.ENV.API_KEY;
+            
+            // 将 Base URL 显示在 id 为 'baseUrl' 的 div 中
             document.getElementById('baseUrl').innerHTML = 
                 'Base URL: ' + window.ENV.BASE_URL;
+            
+            // 在单html项目文件中的<script>中用 window.环变 即可访问环境变量
         }
     </script>
 </body>
