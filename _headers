@@ -1,2 +1,6 @@
+# /* 表示这个规则适用于网站的所有页面和资源（通配符匹配所有路径）
 /*
+  # 设置内容安全策略(CSP)响应头
+  # frame-ancestors 指令控制哪些网站可以通过 frame、iframe、object、embed 或 applet 嵌入当前页面
+  # 'self' 表示只允许同源网站（相同协议、域名和端口）嵌入本站内容
   Content-Security-Policy: frame-ancestors 'self'
